@@ -47,7 +47,7 @@
   font-family: Bona Nona;
 
 }
-.two:hover{
+.two:hover, .whisk:hover, .link:hover, .paypal_link:hover, .product_link:hover{
   color: #f41224;
 }
 .all{
