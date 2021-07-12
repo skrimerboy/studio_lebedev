@@ -29,24 +29,30 @@
     <a class="first" href="https://ironov.artlebedev.com/ru?utm_source=studio&utm_medium=main&utm_campaign=menu">Иронов</a>
     <a class="first" href="https://www.artlebedev.ru/automation/">Автоматизация</a>
   </nav>
-  <nav class="menu-botton">
-  <a class="two" href="https://store.artlebedev.ru/books/">Книги</a>
-  <a class="two" href="https://store.artlebedev.ru/electronics/">Электроника</a>
-  <a class="two" href="https://store.artlebedev.ru/coffee-shop/">Кофе и сладости</a>
-  <a class="two" href="https://store.artlebedev.ru/apparel/">Одежда</a>
-  <a class="two" href="https://store.artlebedev.ru/accessories/">Акксесуары</a>
-  <a class="two" href="https://store.artlebedev.ru/gift-wrapping/">Упаковка и открытки</a>
-  <a class="two" href="https://store.artlebedev.ru/posters/">Платкаты</a>
-  <a class="two" href="https://store.artlebedev.ru/toys-games/">Игры и игрушки</a>
-  <a class="two" href="https://store.artlebedev.ru/type/">Шрифты</a>
-  <a class="two" href="https://store.artlebedev.ru/patterns/">Паттерны</a>
-</nav>
+  <div class="hamburger-menu">
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
+    <ul class="menu-botton">
+  <li><a class="menu__item" href="https://store.artlebedev.ru/books/">Книги</a></li>
+  <li><a class="menu__item" href="https://store.artlebedev.ru/electronics/">Электроника</a></li>
+  <li><a class="menu__item" href="https://store.artlebedev.ru/coffee-shop/">Кофе и сладости</a></li>
+  <li><a class="menu__item" href="https://store.artlebedev.ru/apparel/">Одежда</a></li>
+  <li><a  class="menu__item" href="https://store.artlebedev.ru/accessories/">Акксесуары</a></li>
+  <li><a class="menu__item" href="https://store.artlebedev.ru/gift-wrapping/">Упаковка и открытки</a></li>
+  <li><a  class="menu__item" href="https://store.artlebedev.ru/posters/">Платкаты</a></li>
+  <li><a  class="menu__item" href="https://store.artlebedev.ru/toys-games/">Игры и игрушки</a></li>
+  <li><a  class="menu__item" href="https://store.artlebedev.ru/type/">Шрифты</a></li>
+  <li><a  class="menu__item" href="https://store.artlebedev.ru/patterns/">Паттерны</a></li>
+</ul>
+</div>
   </header>
   <section class="all">
   <div class="product">
     <!--<img src="img/i-love-ny.jpeg" alt="img">-->
     <div class="carousel">
-      <div class="thumb"><img src="img/i-love-ny.jpeg" alt=""></div>
+      <div><img class="thumb" src="img/i-love-ny.jpeg" alt=""></div>
 
     <!--
       <img class="carousel_1" src="img/i-love-ny.jpeg" alt="i-love-ny">
@@ -62,8 +68,8 @@
       <p>Если покупка по какой-либо причине не понравилась,
         <br> мы без вопросов примем ее обратно.</p>
         </div>
-        <button class="fitback">Написать отзыв</button>
     </div>
+    <button class="fitback">Написать отзыв</button>
   </div>
 
 <div class="prices-container">

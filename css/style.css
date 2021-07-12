@@ -1,9 +1,8 @@
 @import url(reset.css);
-@media (min-width: 768px){
+@media screen and (max-width: 1600px){
 .logo{
   padding: 20px;
   width: 73px;
-
 }
 .header{
   display: flex;
@@ -39,15 +38,12 @@
   margin-bottom: 2rem;
 
 }
-.two
-{
+.menu__item{
   padding:10px 20px ;
   color: #0072ff;
   border-color: rgba(0,114,255,.3);
-  font-family: Bona Nona;
-
 }
-.two:hover, .whisk:hover, .link:hover, .paypal_link:hover, .product_link:hover{
+.menu__item:hover, .whisk:hover,  .paypal_link:hover, .product_link:hover{
   color: #f41224;
 }
 .all{
@@ -84,24 +80,23 @@
   align-content: center;
   justify-content: space-around;
   align-items: flex-start;
+    width: 55rem;
+  }
 }
 .name{
   font-size: 1.8rem;
   padding: 2rem 0 .4rem 0;
   font-weight: bold;
 }
-a.thumb
-{
+a.thumb{
    background-position: 0 0;
     display: block;
     width: 5rem;
     height: 5rem;
 }
-
-a.thumb:hover
-{
+.thumb:hover{
    background-image: url(img/i-love-ny-frige.jpeg);
-   no-repeat 50% 50%;
+   no-repeat: 50% 50%;
 }
 .price{
   font-size: 2rem;
@@ -123,8 +118,7 @@ a.thumb:hover
   cursor:  alias;
   text-decoration: none;
 }
-.button:hover
-{
+.button:hover{
   background-color: #fa0;
 }
 p{
@@ -133,9 +127,8 @@ p{
   line-height: 1.4;
 }
 body{
-  font-family:
+  font-family: 'Roboto', sans-serif;
 }
-
 .payment{
   margin-top: 2rem;
   padding-bottom: 4em;
@@ -194,4 +187,169 @@ body{
   border-bottom: 1px dashed #0072ff;
   text-decoration: none;
 }
+}
+@media screen and (max-device-width: 641px) {
+  .logo{
+    width: 2rem;
+  }
+  .menu{
+    margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  overflow-x: scroll;
+  width:100%;
+  }
+  -webkit-scrollbar{
+  width: 0;
+}
+  .menu-botton{
+  }
+  .prices-container{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-start;
+    margin:1rem 1rem;
+    position: absolute;
+  }
+    .all{
+      display: flex;
+      flex-direction:column;
+      flex-wrap: nowrap;
+      align-content: flex-start;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  .thumb{
+    width: 17rem;
+  }
+  .whishlist{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .whisk{
+    font-size: 1rem;
+    padding-left: .5rem;
+    color: #0072ff;
+    border-bottom: 1px dashed #0072ff;
+    text-decoration: none;
+  }
+  .carousel{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 24rem;
+}
+.product{
+  margin-left: 1rem;
+}
+.fitback{
+  background-color: #568add;
+  color:white;
+  padding:.5rem 1.5rem;
+  border:0;
+  border-radius: 3px;
+  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin: 1rem 7rem;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #0072ff;
+  border-color: rgba(0,114,255,.3);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+.menu__item:hover {
+    color: #f41224;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+
 }
